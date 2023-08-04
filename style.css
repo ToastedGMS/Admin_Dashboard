@@ -1,0 +1,34 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
+    height: 100%;
+}
+
+.headTop {
+    background-color: bisque;
+}
+
+.headBottom {
+    background-color: cadetblue;
+}
+
+.sidebar {
+    background-color: aqua;
+    grid-column: 1 / 2;
+    grid-row: 1/3;
+}
+
+main {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.content {
+    background-color: chartreuse;
+}
+
+aside {
+    background-color: cornflowerblue;
+}

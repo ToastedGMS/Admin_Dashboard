@@ -74,8 +74,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.938);
-    clip-path: inset(.5px 1px -10px .5px);
 }
 
 .greeting {
@@ -236,10 +234,70 @@ button:hover {
 main {
     grid-row: 2 / 3;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr 1fr
+
 }
 
 .content {
+    background-color: #fecaca;
+    display: grid;
+    gap: 1.5em;
+    padding: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.cards {
+    width: 400px;
+    height: 200px;
+    padding: 20px 10px 20px 40px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 10px;
+    border: none;
+    background-color: #fef2f2;
+    border-left:8px solid #b91c1c;
+    position: relative;
+    overflow: scroll;
+    over
+}
+
+.cards h2 {
+    font-size: 1.2em;
+    margin-bottom: 0;
+}
+
+.cards p {
+    font-size: 1em;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.cardIcons {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    position: absolute;
+}
+
+.fav::marker {
+    font: var(--fa-font-solid);
+    font-weight: 400;
+    content: '\f005';
+    font-size: 1.5em;
+}
+
+.view::marker {
+    font: var(--fa-font-solid);
+    font-weight: 400;
+    content: '\f070';
+    font-size: 1.5em;
+}
+
+.share::marker {
+    font: var(--fa-font-solid);
+    font-weight: 400;
+    content: '\f14d';
+    font-size: 1.5em;
 }
 
 aside {

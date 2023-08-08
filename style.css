@@ -11,8 +11,60 @@ body {
     height: 100%;
 }
 
+/*Header related rules*/
+
 .headTop {
     background-color: #fef2f2;
+    padding: 1em 3em 1em;
+    display: flex;
+}
+
+.headTop .find {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.headTop input {
+    width: 70%;
+    background-color: #fecaca;
+    border-radius: 15px;
+    border-style:none ;
+    padding: 5px 15px 5px;
+    display: inline-block;
+    margin-left: 1em;
+}
+
+.find::before {
+    font: var(--fa-font-solid);
+    font-weight: 900;
+    content: '\f002';
+}
+.notif {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    gap: 1.5em;
+}
+
+.notif p {
+    font-size: 1.3em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.profilePic {
+    height: 4em;
+    border-radius: 50%;
+}
+
+.notif::before {
+    font: var(--fa-font-solid);
+    font-weight: 400;
+    content: '\f0f3';
+    font-size: 2em;
 }
 
 .headBottom {
@@ -22,13 +74,17 @@ body {
 .sidebar {
     background-color: #b91c1c;
     color: #fef2f2;
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: 600;
-    line-height: 180%;
+    line-height: 220%;
     padding: .75em;
     grid-column: 1 / 2;
     grid-row: 1/3;
     height: 100vh;
+}
+
+.dashIcon {
+    font-size: 1.25em;
 }
 
 .sidebar a{

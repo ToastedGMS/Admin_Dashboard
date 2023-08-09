@@ -11,6 +11,13 @@ body {
     height: 100%;
 }
 
+main {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 3fr 1fr
+
+}
+
 /*Header section*/
 
 .headTop {
@@ -104,7 +111,7 @@ body {
     gap: 3em;
 }
 
-button {
+.headBtn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,7 +125,7 @@ button {
     border: none;
 }
 
-button:hover {
+.headBtn:hover {
     background-color: #991b1b;
 }
 
@@ -133,7 +140,7 @@ button:hover {
     padding: .75em;
     grid-column: 1 / 2;
     grid-row: 1/3;
-    height: 100vh;
+    height: 100%;
 }
 
 .dashIcon {
@@ -231,18 +238,15 @@ button:hover {
     font-size: .85em;
 }
 
-main {
-    grid-row: 2 / 3;
-    display: grid;
-    grid-template-columns: 3fr 1fr
-
-}
+/*Content Cards section*/
 
 .content {
     background-color: #fecaca;
     display: grid;
-    gap: 1.5em;
+    gap: 1em;
     padding: 2em;
+    box-sizing: border-box;
+    height: 100%;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
@@ -257,8 +261,10 @@ main {
     background-color: #fef2f2;
     border-left:8px solid #b91c1c;
     position: relative;
-    overflow: scroll;
-    over
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
 }
 
 .cards h2 {
@@ -272,33 +278,25 @@ main {
     margin-top: 0;
 }
 
-.cardIcons {
+.iconBtns {
     display: flex;
-    flex-direction: row;
-    gap: 3em;
-    position: absolute;
+    gap: 1em;
+    justify-content: end;
+    align-items: end;
+    padding-right: .5em;
 }
 
-.fav::marker {
-    font: var(--fa-font-solid);
-    font-weight: 400;
-    content: '\f005';
-    font-size: 1.5em;
+.iconBtn {
+    border: none;
+    background-color: transparent;
+    box-sizing: content-box;
 }
 
-.view::marker {
-    font: var(--fa-font-solid);
-    font-weight: 400;
-    content: '\f070';
-    font-size: 1.5em;
+.fa-solid:hover {
+    font-size: large;
 }
 
-.share::marker {
-    font: var(--fa-font-solid);
-    font-weight: 400;
-    content: '\f14d';
-    font-size: 1.5em;
-}
+/*Content Side section*/
 
 aside {
 }

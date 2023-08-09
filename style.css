@@ -1,6 +1,7 @@
 /*General body rules*/
 
-body {
+body, html {
+    height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif ;   
 }
 
@@ -140,7 +141,7 @@ main {
     padding: .75em;
     grid-column: 1 / 2;
     grid-row: 1/3;
-    height: 100%;
+
 }
 
 .dashIcon {
@@ -246,8 +247,12 @@ main {
     gap: 1em;
     padding: 2em;
     box-sizing: border-box;
-    height: 100%;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.content h2 {
+    grid-column: span 2;
+    margin: 0%;
 }
 
 .cards {
@@ -255,7 +260,6 @@ main {
     height: 200px;
     padding: 20px 10px 20px 40px;
     box-sizing: border-box;
-    border: 1px solid black;
     border-radius: 10px;
     border: none;
     background-color: #fef2f2;
@@ -299,4 +303,63 @@ main {
 /*Content Side section*/
 
 aside {
+    background-color: #fecaca;
+    padding-right: 2em;
 }
+
+.announcements div{
+    background-color: #fef2f2;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px 10px 20px;
+}
+
+.announcements div h3 {
+    margin:0%;
+}
+
+.announcements div div {
+    padding: 1em;
+}
+
+.announcements div :nth-child(2) {
+    border-top: 2px solid #991b1b;
+    border-bottom: 2px solid #991b1b;
+    border-radius: 0%;
+}
+
+.trending div {
+    background-color: #fef2f2;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 10px 10px 20px;
+
+}
+
+.trending div div {
+    display: flex;
+    flex-direction: row;
+    line-height: 1%;
+}
+
+.trending div div div {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.trending img {
+    height: 4em;
+    border-radius: 50%;
+}
+
+.trndUser {
+    font-weight: 900;
+    font-style: italic;
+}
+
+.under {
+    margin: 0%;
+    font-size: .8em;
+    color: rgb(88, 88, 88);
+}
+
